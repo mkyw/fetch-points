@@ -1,0 +1,40 @@
+1. I used Python because I am most comfortable coding in Python and have had past projects parsing through csv
+    files. In addition, I think Python is most compatible and easiest to write in with this type of project
+    especially with the libraries available, although other languages can obviously be used as well.
+    
+    For the libraries I used, I imported the csv and sys which are necessary for getting the csv file input
+    and the arguments passed through when calling the program. In addition, I used the operator library which
+    allows me to sort the inputs in order of earliest timestamp to latest, which allows me to treat the list
+    as a stack and simply pop the latest payer as I try to accumulate enough points.
+    
+    For the programming tools I used, I imported the csv files as individual dictionaries because it's an easy
+    way to keep track of each payer, corresponding value, and timestamp. I am able to sort them and get the
+    information I need quickly. I used a stack to be able to efficiently sort through the payers and pop each
+    payer from the earliest to the latest timestamp.
+
+2. I think the advantage of my solution is that it is a very simple solution to the problem and does not
+    require a lot of memory or time. The sorted class from Python requires O(nlog(n)) time, and the for loop
+    and while loop each take O(n) time for a worst-case scenario, assuming valid input. Thus, the entire
+    program takes O(nlog(n)) time, which I think is a good solution time for this problem.
+    
+    There are several assumptions I made in creating this program which makes the solution a little limited.
+    I think in a more complex and integrated solution, the updated stack would be returned as well. In
+    addition, I am assuming all inputs are valid, so it does not check against invalid inputs, though it
+    does check for requests that would overdraw points. Also, since I'm assuming the program should print to
+    output, I've decided to print the results in addition to returning them.
+
+3. My favorite project so far is from my operating systems course last semester. I created a distributed file
+    system as a stand-alone UDP-based server, which included a client library to access files organized by
+    directories. In addition, I also established server idempotency to allow the client to retry operations
+    in case of system crashes.
+    
+    Firstly, the course was quite difficult because it was a class on the backend and required C which I was
+    somewhat new to. However, the projects we completed which applied concurrency, memory management,
+    scheduling, and multithreading helped me gain experience in building complex systems.
+
+    For this project specifically, I learned about crash recovery and partial failures, and how we can build
+    systems that protect and save progress in such cases, and I think this was the most difficult and
+    interesting portion because the solutions are very thoughtful and I have not learned about crash
+    protections before. In addition, I had to implement a new data structure for the files, which contained
+    the data block, inode block, and inode map. Implementation-wise, this part was the most difficult part
+    as it was the most extensive part of the project and was prone to many errors.
